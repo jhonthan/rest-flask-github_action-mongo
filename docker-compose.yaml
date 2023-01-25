@@ -17,4 +17,4 @@ services:
     depends_on:
       - mongodb
     volumes:
-      - .:/app
+      - .:/app #Entender melhor
