@@ -1,19 +1,10 @@
+from flask import Flask, jsonify
+from flask_restful import Resource, Api, reqparse
+from mongoengine import NotUniqueError
+from .model import UserModel
 import re 
 
-from flask import Flask, jsonify
-from flask_restful import Resource, Api, reqparse   
-from flask_mongoengine import MongoEngine
-from mongoengine import NotUniqueError
-
 app = Flask(__name__)
-
-app.config['MONGODB_SETTINGS'] = {
-    'db': 'users',
-    'port': '27017',
-    'host': 'mongodb',    
-    'username': 'admin',
-    'password': 'admin'
-}
 
 _user_parser = reqparse.RequestParser()
 _user_parser.add_argument('first_name',
@@ -42,16 +33,7 @@ _user_parser.add_argument('birth_date',
                           help="This field cannot be blank."
                           )
 
-api = Api(app) #Inicializa API
-db = MongoEngine(app) #Inicializa o banco
-
-#Declaracao da classe conectando ao Banco - MongoDB - NoSQL
-class UserModel(db.Document):
-    cpf = db.StringField(required=True, unique=True)
-    first_name = db.StringField(required=True)
-    last_name = db.StringField(required=True)
-    email = db.EmailField(required=True)
-    birth_date = db.DateTimeField(required=True)   
+api = Api(app) #Inicializa API  
 
 class Users(Resource):
     def get(self):
