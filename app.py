@@ -1,6 +1,6 @@
 import re 
 
-from flask import Flask
+from flask import Flask, jsonify
 from flask_restful import Resource, Api, reqparse   
 from flask_mongoengine import MongoEngine
 from mongoengine import NotUniqueError
