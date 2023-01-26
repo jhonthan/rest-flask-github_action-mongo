@@ -1,10 +1,8 @@
-from flask import Flask, jsonify
+from flask import jsonify
 from flask_restful import Resource, Api, reqparse
 from mongoengine import NotUniqueError
 from .model import UserModel
 import re 
-
-app = Flask(__name__)
 
 _user_parser = reqparse.RequestParser()
 _user_parser.add_argument('first_name',
@@ -32,8 +30,6 @@ _user_parser.add_argument('birth_date',
                           required=True,
                           help="This field cannot be blank."
                           )
-
-api = Api(app) #Inicializa API  
 
 class Users(Resource):
     def get(self):
@@ -92,9 +88,4 @@ class User(Resource):
 
         return {"message": "User does not exist in database!"}, 400
 
-#Endpoints
-api.add_resource(Users, '/users')
-api.add_resource(User, '/user', '/user/<string:cpf>')
 
-if __name__ == '__main__':
-    app.run(debug=True, host="0.0.0.0")
