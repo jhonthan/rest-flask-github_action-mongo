@@ -8,3 +8,11 @@ class DevConfig():
         'username': os.getenv('MONGODB_USER'),
         'password': os.getenv('MONGODB_PASSWORD')
     }
+
+#Teste unitario do banco
+class Mockonfig():
+
+    MONGODB_SETTINGS = {
+        'db': 'users',
+        'host': 'mongomock://localhost'
+    }
