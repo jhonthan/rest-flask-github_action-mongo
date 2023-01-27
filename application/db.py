@@ -1,7 +1,7 @@
 from flask_mongoengine import MongoEngine
 
 
-#Inicializa o banco
+# Inicializa o banco
 db = MongoEngine()
 
 
