@@ -1,5 +1,5 @@
 #APP = restapi
-APP = comunidade-app-restapi
+APP = comunidadedevops-restapi
 
 test:
 	@flake8 . --exclude .venv
@@ -13,4 +13,3 @@ heroku:
 	@heroku container:login
 	@heroku container:push -a $(APP) web
 	@heroku container:release -a $(APP) web
-	@heroku ps:scale -a $(APP) web
