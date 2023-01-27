@@ -1,4 +1,5 @@
-APP = restapi
+#APP = restapi
+APP = comunidade-app-restapi
 
 test:
 	@flake8 . --exclude .venv
@@ -9,6 +10,7 @@ compose:
 	@docker-compose up
 
 heroku:
-	@heroku container:push -a comunidade-app-restapi web
-	@heroku container:release -a comunidade-app-restapi web
-	@heroku ps:scale -a comunidade-app-restapi web
+	@heroku container:login
+	@heroku container:push -a $(APP) web
+	@heroku container:release -a $(APP) web
+	@heroku ps:scale -a $(APP) web
