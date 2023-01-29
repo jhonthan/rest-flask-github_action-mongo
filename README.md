@@ -27,20 +27,31 @@ Through a simple application in Python using Rest API, the application can do us
 '''
 Insert user on MongoDB Atlas
 '''
+
+
 ![Screenshot](Screenshot/POST-User.png)
 
 
 '''
 Validation User basead on ID
 '''
+
+
 ![Screenshot](Screenshot/validation-user.png)
+
 
 '''
 Consult APP using the class /users
 '''
+
+
 ![Screenshot](Screenshot/app-heroku.png)
+
+
 
 '''
 User query within the MongoDB Atlas
 '''
+
+
 ![Screenshot](Screenshot/mongodb-atlas.png)
