@@ -6,6 +6,7 @@ Through a simple application in Python using Rest API, the application can do us
 ---
 
 ### 🛠️ Worked wuth
+* Python
 * REST
 * Flake8
 * Docker
