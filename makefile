@@ -1,5 +1,5 @@
 #  APP = restapi
-APP = comunidadedevops-restapi
+APP = comunidade-app-restapi
 
 test:
 	@flake8 . --exclude .venv
