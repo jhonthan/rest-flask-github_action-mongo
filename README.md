@@ -11,7 +11,7 @@ Through a simple application in Python using Rest API, the application can do us
 * Docker
 * Docker Compose
 * Make
-* MOngoDB Atlas
+* MongoDB Atlas
 * Heroku
 ---
 
