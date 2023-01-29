@@ -37,7 +37,7 @@ Validation User basead on ID
 '''
 
 
-![Screenshot](Screenshot/validation-user.png)
+![Screenshot](Screenshot/validation-users.png)
 
 
 '''
@@ -54,4 +54,4 @@ User query within the MongoDB Atlas
 '''
 
 
-![Screenshot](Screenshot/mongodb-atlas.png)
+![Screenshot](Screenshot/mongodb-atlas1.png)
