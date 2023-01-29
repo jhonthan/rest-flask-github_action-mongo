@@ -1,4 +1,4 @@
-#  APP = restapi
+  #  APP = restapi (previous)
 APP = comunidade-app-restapi
 
 test:
