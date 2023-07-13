@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: restapi-flask
+  labels:
+    app: restapi-flask
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: restapi-flask
+  template:
+    metadata:
+      labels:
+        app: restapi-flask
+    spec:
+      containers:
+        - name: restapi-flask
+          image: restapi-flask:latest
+          imagePulPolicy: IfNotPresent
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 5000
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 5000
