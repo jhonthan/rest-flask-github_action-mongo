@@ -1,4 +1,4 @@
-APP = comunidade-app-restapi
+APP = restapi-flask
 
 test:
 	@bandit -r . -x '/.venv','/tests'
@@ -25,6 +25,18 @@ setup-dev:
 		--for=condition=ready pod \
 		--selector=app.kubernetes.io/component=mongodb \
 		--timeout=270s
+	@kubectl expose deploy restapi-flask \
+		--port 5000 \
+		--target-port 5000 \
+		--dry-run -oyaml | kubectl neat > 30-service.yaml
+
+deploy-dev:
+	@docker build -t $(APP):latest .
+	@kind load docker-image $(APP):latest
+	@kubectl apply -f kubernetes/manifests
+	@kubectl rollout restart deploy restapi-flask
+
+dev: setup-dev deploy-dev
 
 teardown-dev:
 	@kind delete clusters kind

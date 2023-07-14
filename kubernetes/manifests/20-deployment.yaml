@@ -18,6 +18,12 @@ spec:
         - name: restapi-flask
           image: restapi-flask:latest
           imagePulPolicy: IfNotPresent
+          env:
+            - name: FLASK_ENV
+              value: development
+          envFrom:
+            - secretRef:
+              name: mongodb-credentials
           livenessProbe:
             httpGet:
               path: /health
