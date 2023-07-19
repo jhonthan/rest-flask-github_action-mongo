@@ -18,17 +18,13 @@ setup-dev:
 		--selector=app.kubernetes.io/component=controller \
 		--timeout=270s
 	@helm upgrade --install \
-		--set auth.rootPassword="root" \
-		--set image.tag=5.0.8 \
-		mongodb kubernetes/charts/mongodb
+	--set auth.rootPassword="root" \
+	--set image.tag=5.0.8 \
+	mongodb kubernetes/charts/mongodb
 	@kubectl wait \
-		--for=condition=ready pod \
-		--selector=app.kubernetes.io/component=mongodb \
-		--timeout=270s
-	@kubectl expose deploy restapi-flask \
-		--port 5000 \
-		--target-port 5000 \
-		--dry-run -oyaml | kubectl neat > 30-service.yaml
+	--for=condition=ready pod \
+	--selector=app.kubernetes.io/component=mongodb \
+	--timeout=270s
 
 deploy-dev:
 	@docker build -t $(APP):latest .
