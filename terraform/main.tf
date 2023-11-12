@@ -1,7 +1,7 @@
-module "k8s" {
-  source = "git@github.com:jhonthan/terraform-comunidadedevops.git"
+module "kubernetes" {
+  source = "/home/jhon/DevOps/comunidade-devops-mateus-muller/terraform-comunidadedevops"
 	cidr_block = "10.34.0.0/16"
-	project_name = "k8s-rest-api"
+	project_name = "restapi"
 	region = "us-east-1"
 	tags = {
         Department = "DevOps"
