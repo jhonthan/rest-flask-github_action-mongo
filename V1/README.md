@@ -1,7 +1,7 @@
 ## 💡 Idea
 Through a simple application in Python using Rest API, the application can do user creation, ID validation and validate the user within the database, hosted on MongoDB Atlas and the application hosted on Heroku.
 
-![Screenshot](Screenshot/REST_API_AWS.png)
+![Screenshot](REST_API_Heroku.png)
 
 ---
 
@@ -12,25 +12,20 @@ Through a simple application in Python using Rest API, the application can do us
 * Docker
 * Docker Compose
 * Make
-* MongoDB
-* Terraform
-* AWS
-* Kubernetes (EKS)
-* GitHub Actions
+* MongoDB Atlas
+* Heroku
 ---
 
 ### 🧾 Prerequisites
 * Docker
 * Docker Compose
 * Python
+* Heroku CLI
 * MongoDB API
-* Terraform
-* AWS
-* Kubernetes
 ---
 
 '''
-Insert user on MongoDB
+Insert user on MongoDB Atlas
 '''
 
 
