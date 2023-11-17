@@ -1,5 +1,5 @@
 ## 💡 Idea
-Through a simple application in Python using Rest API, the application can do user creation, ID validation and validate the user within the database running in MongoDB hosted in AWS EC2 and the application running in AWS EKS (Amazon Kubernetes Service).
+Through a simple application in Python using Rest API, the application can do user creation, ID validation and validate the user within the database running in MongoDB hosted in AWS EC2, and the application running in AWS EKS (Amazon Kubernetes Service).
 
 ![Screenshot](Screenshot/REST_API_AWS.png)
 
