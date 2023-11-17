@@ -1,5 +1,5 @@
 ## 💡 Idea
-Through a simple application in Python using Rest API, the application can do user creation, ID validation and validate the user within the database, hosted on MongoDB Atlas and the application hosted on Heroku.
+Through a simple application in Python using Rest API, the application can do user creation, ID validation and validate the user within the database running in MongoDB hosted in AWS EC2, and the application running in AWS EKS (Amazon Kubernetes Service).
 
 ![Screenshot](Screenshot/REST_API_AWS.png)
 
@@ -50,13 +50,4 @@ Consult APP using the class /users
 '''
 
 
-![Screenshot](Screenshot/app-heroku1.png)
-
-
-
-'''
-User query within the MongoDB Atlas
-'''
-
-
-![Screenshot](Screenshot/mongodb-atlas1.png)
+![Screenshot](Screenshot/app-users.png)
